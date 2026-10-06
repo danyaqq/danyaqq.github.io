@@ -5,15 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alias — Support</title>
   <script>
-    location.replace(/^ru\b/i.test(navigator.language || "") ? "ru/" : "en/");
+    var code = (navigator.language || "").slice(0, 2).toLowerCase();
+    location.replace((["ru", "de", "fr", "es", "ja", "ko"].indexOf(code) >= 0 ? code : "en") + "/");
   </script>
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
   <main class="page">
     <ul class="links">
-      <li><a href="ru/" lang="ru">Поддержка</a></li>
       <li><a href="en/">Support</a></li>
+      <li><a href="ru/" lang="ru">Поддержка</a></li>
+      <li><a href="de/" lang="de">Support (Deutsch)</a></li>
+      <li><a href="fr/" lang="fr">Assistance</a></li>
+      <li><a href="es/" lang="es">Soporte</a></li>
+      <li><a href="ja/" lang="ja">サポート</a></li>
+      <li><a href="ko/" lang="ko">지원</a></li>
     </ul>
   </main>
 </body>
